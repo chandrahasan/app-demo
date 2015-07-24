@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+	<application>
+		<resource-handler>com.app.demo.web.util.PrimeResourceHandlerWithCache</resource-handler>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+		<!-- application filter -->
+
+		<!-- locale application properties -->
+		<resource-bundle>
+			<base-name>i18n</base-name>
+			<var>i18n</var>
+		</resource-bundle>
+		<message-bundle>i18n</message-bundle>
+		<locale-config>
+			<default-locale>en</default-locale>
+			<supported-locale>ru</supported-locale>
+		</locale-config>
+
+	</application>
+	<factory>
+		<exception-handler-factory>com.app.demo.web.filter.ViewExpiredExceptionExceptionHandlerFactory</exception-handler-factory>
+	</factory>
+
+</faces-config>
